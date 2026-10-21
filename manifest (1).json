@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Skipper",
+  "version": "1.0.0",
+  "description": "Détecte les pubs YouTube, coupe le son, accélère à x16, saute à la fin et clique sur « Passer ».",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "yt-ad-skipper@mattrick08"
+    }
+  }
+}
